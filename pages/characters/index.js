@@ -1,12 +1,16 @@
 import Link from "next/link";
 import style from "../../styles/Characters.module.css";
-import Layout from "./layout";
+import Layout from "../../components/layout";
+import Head from "next/head";
 
 export default function CharactersPage({ characters }) {
   console.log(characters);
 
   return (
     <Layout>
+      <Head>
+        <title>Characters</title>
+      </Head>
       <div className={style.container}>
         {characters.map((item) => (
           <div key={item.id}>
